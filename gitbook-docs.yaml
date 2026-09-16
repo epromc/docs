@@ -4,10 +4,17 @@ site:
   title: EproMC Documentation
   structure:
     - type: space
+      key: space-home
+      title: Home
+      path: home
+      default: true
+      content:
+        directory: ./home
+
+    - type: space
       key: space-etools
       title: eTools
       path: etools
-      default: true
       content:
         directory: ./eTools
 
