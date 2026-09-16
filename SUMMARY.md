@@ -3,7 +3,7 @@
 * [🏠 EproMC Hub](README.md)
 
 ## ⚡ eTools
-* [Overview & Introduction](eTools/README.md)
+* [⚡ Overview & Introduction](eTools/README.md)
 * [📥 Installation & Setup](eTools/Installation-and-Setup.md)
 * [⌨️ Commands & Permissions](eTools/Commands-and-Permissions.md)
 * [🌾 Custom Tools & Utilities](eTools/Custom-Tools-Guide.md)
@@ -11,7 +11,7 @@
 * [🗄️ Database & Lifespans](eTools/Database-and-Lifespans.md)
 
 ## ⚙️ eGens
-* [Overview & Introduction](eGens/README.md)
+* [⚡ Overview & Introduction](eGens/README.md)
 * [📥 Installation & Setup](eGens/Installation-and-Setup.md)
 * [⌨️ Commands & Permissions](eGens/Commands-and-Permissions.md)
 * [💎 Generators & Progression](eGens/Generators-and-Tiers.md)
@@ -22,7 +22,7 @@
 * [🗄️ Database, Anti-Dupe & Performance](eGens/Database-and-AntiDupe.md)
 
 ## 🛏️ eHome
-* [Overview & Introduction](eHome/README.md)
+* [⚡ Overview & Introduction](eHome/README.md)
 * [📥 Installation & Setup](eHome/Installation-and-Setup.md)
 * [⌨️ Commands & Permissions](eHome/Commands-and-Permissions.md)
 * [🛏️ Bed-Themed GUI & Customization](eHome/GUI-and-Customization.md)

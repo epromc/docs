@@ -45,11 +45,12 @@ To keep the server economy balanced when running multiple events, eGens enforces
 
 $$\text{Effective Multiplier} = 1 + \sum_{i} (\text{Multiplier}_i - 1)$$
 
-> [!TIP]
-> **Stacking Example:**
-> If a global **$2\times$ Sell Event** and a personal **$3\times$ Sell Booster** are active simultaneously:
-> $$\text{Effective} = 1 + (2 - 1) + (3 - 1) = \mathbf{4\times \text{ Sell Value}}$$
-> *(Rather than compounding to $6\times$, preserving server economic balance).*
+{% hint style="info" %}
+**Stacking Example:**
+If a global **$2\times$ Sell Event** and a personal **$3\times$ Sell Booster** are active simultaneously:
+$$\text{Effective} = 1 + (2 - 1) + (3 - 1) = \mathbf{4\times \text{ Sell Value}}$$
+*(Rather than compounding to $6\times$, preserving server economic balance).*
+{% endhint %}
 
 * **Global Stack Cap (`events.stack.max-global`):** Default `1`. Increase to `2–5` if you want admins to run simultaneous global events.
 * **Speed Boost Clamping:** Speed boosts evaluate using `max(m1, m2)` to prevent excessive entity spawn rates on Folia region threads.
