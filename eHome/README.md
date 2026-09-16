@@ -41,7 +41,7 @@ Welcome to the official **eHome** (`v0.0.1-RELEASE`) documentation on [GitBook](
 ## 🔗 Useful Links & Community
 
 * 📖 **Live Documentation:** [https://epromc.gitbook.io/ehome](https://epromc.gitbook.io/ehome)
-* 💬 **Discord Support:** [https://discord.gg/sVWuc49eYV](https://discord.gg/sVWuc49eYV) — Untuk pertanyaan atau kendala bug, silakan hubungi via Discord.
+* 💬 **Discord Support:** [https://discord.gg/sVWuc49eYV](https://discord.gg/sVWuc49eYV) — For questions, setup assistance, or bug reports, feel free to contact us via Discord.
 * 📊 **bStats Metrics:** [https://bstats.org/plugin/bukkit/eHome](https://bstats.org/plugin/bukkit/eHome)
 * 🐛 **Report Issues & Bugs:** [GitHub Issues](https://github.com/epromc/ehome-plugin/issues)
 * 🎥 **YouTube Showcase:** Coming Soon

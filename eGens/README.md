@@ -49,7 +49,7 @@ Welcome to the official **eGens** (`v1.0.1-RELEASE`) documentation on [GitBook](
 ## 🔗 Useful Links & Community
 
 * 📖 **Live Documentation:** [https://epromc.gitbook.io/egens](https://epromc.gitbook.io/egens)
-* 💬 **Discord Support:** [https://discord.gg/sVWuc49eYV](https://discord.gg/sVWuc49eYV) — Untuk pertanyaan atau kendala bug, silakan hubungi via Discord.
+* 💬 **Discord Support:** [https://discord.gg/sVWuc49eYV](https://discord.gg/sVWuc49eYV) — For questions, setup assistance, or bug reports, feel free to contact us via Discord.
 * 🐛 **Report Issues & Bugs:** [GitHub Issues](https://github.com/epromc/egens-plugins/issues)
 
 ---

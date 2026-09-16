@@ -38,7 +38,7 @@ Welcome to the official **eTools** (`v0.0.1-RELEASE`) documentation on [GitBook]
 ## 🔗 Useful Links & Community
 
 * 📖 **Live Documentation:** [https://epromc.gitbook.io/etools](https://epromc.gitbook.io/etools)
-* 💬 **Discord Support:** [https://discord.gg/sVWuc49eYV](https://discord.gg/sVWuc49eYV) — Untuk pertanyaan atau kendala bug, silakan hubungi via Discord.
+* 💬 **Discord Support:** [https://discord.gg/sVWuc49eYV](https://discord.gg/sVWuc49eYV) — For questions, setup assistance, or bug reports, feel free to contact us via Discord.
 * 📊 **bStats Metrics:** [https://bstats.org/plugin/bukkit/eTools/33947](https://bstats.org/plugin/bukkit/eTools/33947)
 * 🐛 **Report Issues & Bugs:** [GitHub Pull Requests / Issues](https://github.com/epromc/etools-plugin/pulls)
 * 🎥 **YouTube Showcase:** Coming Soon

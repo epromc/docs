@@ -16,17 +16,17 @@ Welcome to the centralized documentation portal for **EproMC** Minecraft plugins
 
 ---
 
-## 📦 Pilih Dokumentasi Plugin
+## 📦 Select Plugin Documentation
 
 | ⚡ eTools | ⚙️ eGens (v1.0.1) | 🛏️ eHome |
 | :---: | :---: | :---: |
 | [![eTools](https://img.shields.io/badge/Plugin-eTools-00F2FE?style=for-the-badge)](eTools/README.md) | [![eGens](https://img.shields.io/badge/Plugin-eGens%20v1.0.1-00D26A?style=for-the-badge)](eGens/README.md) | [![eHome](https://img.shields.io/badge/Plugin-eHome-FF5E5B?style=for-the-badge)](eHome/README.md) |
 | **Custom Tools Engine**<br><br>Harvester Hoes, Sell Wands, Trench Pickaxes, Lightning Wands, and lifespan tracking. | **Generator & Tycoon**<br><br>28 unified standalone generator files, anti-abuse drop lock, corruption & repair, and sellwands. | **Bed-Themed Home System**<br><br>16-color bed palette GUI, proactive safe teleportation, and social home sharing (`/home share`). |
-| 👉 [**Buka Docs eTools →**](eTools/README.md) | 👉 [**Buka Docs eGens →**](eGens/README.md) | 👉 [**Buka Docs eHome →**](eHome/README.md) |
+| 👉 [**Open eTools Docs →**](eTools/README.md) | 👉 [**Open eGens Docs →**](eGens/README.md) | 👉 [**Open eHome Docs →**](eHome/README.md) |
 
 ---
 
-## 🔍 Ikhtisar Seluruh Plugin
+## 🔍 All Plugins Overview
 
 ### ⚡ [eTools](eTools/README.md)
 **Modern Custom Tools & Utilities Engine**
@@ -67,7 +67,7 @@ Welcome to the centralized documentation portal for **EproMC** Minecraft plugins
 
 ## 🔗 Community & Support
 
-* 💬 **Discord Support Server:** [Join our Discord](https://discord.gg/sVWuc49eYV) — Untuk pertanyaan, bantuan, atau laporan bug, silakan hubungi kami di Discord!
+* 💬 **Discord Support Server:** [Join our Discord](https://discord.gg/sVWuc49eYV) — For questions, assistance, or bug reports, feel free to contact us on Discord!
 * 🐙 **GitHub Organization:** [https://github.com/epromc](https://github.com/epromc)
 * 📚 **Documentation Repository:** [https://github.com/epromc/docs](https://github.com/epromc/docs)
 
