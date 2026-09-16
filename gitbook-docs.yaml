@@ -1,0 +1,26 @@
+$schema: https://api.gitbook.com/gitbook-docs.yaml
+
+site:
+  title: EproMC Documentation
+  structure:
+    - type: space
+      key: space-etools
+      title: eTools
+      path: etools
+      default: true
+      content:
+        directory: ./eTools
+
+    - type: space
+      key: space-egens
+      title: eGens
+      path: egens
+      content:
+        directory: ./eGens
+
+    - type: space
+      key: space-ehome
+      title: eHome
+      path: ehome
+      content:
+        directory: ./eHome
