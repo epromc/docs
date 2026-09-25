@@ -1,3 +1,3 @@
-# Table of contents
+﻿# Table of contents
 
-* [🏠 EproMC Documentation Hub](README.md)
+* [🌐 EproMC Documentation Hub](README.md)
