@@ -1,95 +1,85 @@
----
-description: Comprehensive breakdown of all custom tool archetypes, mechanics, and capabilities in eTools.
+﻿---
+description: Breakdown of all tool types, area mechanics, and utility items in eTools.
 ---
 
-# 🌾 Custom Tools & Utilities
-
-**eTools** supports an extensive lineup of custom tool archetypes powered by cutting-edge mechanics:
+# Custom Tools & Utilities
 
 ---
 
-## ⛏️ 1. Directional Drills & Shovels (`DRILL`, `SHOVEL`)
+## 1. Drills (`DRILL`) and Shovels (`SHOVEL`)
 
-* **Mechanics:** Mines or digs in a **3x3** (or **5x5**) area based on the player's line of sight:
-  * Facing Up / Down: Clears horizontal planes (X and Z axis).
-  * Facing North / South: Clears vertical planes (X and Y axis).
-  * Facing East / West: Clears vertical planes (Z and Y axis).
-* **Drill Target Blocks:** Stone, Deepslate, Netherrack, End Stone, Granite, Diorite, Andesite, Tuff, Basalt, Blackstone, Sandstone, and all mining ores.
-* **Shovel Target Blocks:** Dirt, Grass Blocks, Sand, Gravel, Clay, Mud, Soul Sand, Soul Soil, and Snow.
-* **Native Item Merging:** Mined items drop naturally and merge automatically to minimize entity count and preserve server performance.
+Area-breaking tools that mine or dig in a configurable 3D volume. The shape is defined by three fields in `tools.yml`:
 
-{% hint style="tip" %}
-**Directional Intelligence:** Mining floors while looking straight down will clear a flat 3x3 beneath your feet. Mining walls will open a 3x3 tunnel entrance facing you!
-{% endhint %}
+| Field | Description |
+|:---|:---|
+| `width` | Span perpendicular to the mining direction |
+| `height` | Span along the vertical or forward axis depending on face |
+| `depth` | How deep the area extends into the surface |
 
----
+The three fields combine into a `WxH` or `WxHxD` shape that automatically adapts to the face the player is mining:
 
-## 🪓 2. Tree Feller Axe (`AXE`)
+**Mining a wall** (facing North, South, East, or West)
+The area opens as a vertical plane in front of the player. Width expands horizontally, height expands vertically. If `depth > 1`, the area extends further into the wall — for example, `3x3x3` cuts a cube-shaped tunnel three blocks deep.
 
-* **Mechanics:** Utilizes a **Breadth-First Search (BFS)** queue algorithm to fell an entire connected tree up to `max-tree-feller-blocks` (default: 500 blocks) in one swing.
-* **Leaf Auto-Decay:** Connected leaves decay in cascading order so trees never leave awkward floating foliage.
-* **Protection Integration:** Validates region permissions per block to ensure the feller does not cross into another player's protected land claim.
+**Mining a floor or ceiling** (looking up or down)
+The area opens as a flat horizontal plane. Width and height both span the X/Z axes aligned with the player's facing direction. Depth extends further up or down.
 
----
+You can configure non-square shapes too. A `3x1x1` drill clears a horizontal strip; a `1x3x1` drill clears a vertical strip; a `3x3x3` drill cuts a full cube on each swing.
 
-## 🌾 3. Agricultural Hoes (`HOE`) - Harvester & Tiller
+**Target blocks for Drills:** All pickaxe-mineable blocks — stone, ores, deepslate, netherrack, end stone, sandstone, basalt, blackstone, tuff, granite, diorite, andesite, and similar.
 
-Hoes in eTools combine three essential farming functions:
-
-### A. AoE Soil Tilling (Right-Click)
-* **Right-Click** on tillable soil (`GRASS_BLOCK`, `DIRT`, `DIRT_PATH`, `COARSE_DIRT`, `ROOTED_DIRT`) converts the entire area into **Farmland**.
-  * `amethyst_hoe`: **3x3** area (up to 9 blocks).
-  * `emerald_hoe`: **5x5** area (up to 25 blocks).
-* **Adaptive Elevation (`dy: -1 to +1`):** Seamlessly tills undulating terrain, hills, and stepped terraces.
-* **Grass Clearing:** Short grass, tall grass, and ferns sitting on top are cleared automatically.
-* **Rooted Dirt Mechanic:** Tilling rooted dirt naturally drops `HANGING_ROOTS` items, matching vanilla behavior.
-
-### B. AoE Harvesting & Auto-Replanting (Left or Right-Click)
-* **Right-Click or Left-Click** on mature crops (Wheat, Carrots, Potatoes, Beetroots, Nether Wart, Cocoa, Pitcher Crops, Torchflowers) harvests all mature crops within the 3x3 or 5x5 radius.
-* Crop yields drop naturally at the crop's location, and seeds are replanted at age 0 with anti-desync protection.
-* Clicking the farmland block underneath a crop will automatically redirect the harvest to the crop above.
-
-### C. Hoe-Mineable AoE Blocks (3x3 & 5x5)
-* Supports directional 3x3 and 5x5 mining for blocks where the hoe is the optimal tool:
-  * Hay Bales (`HAY_BLOCK`), Targets, Dried Kelp Blocks, Shroomlights, Sponges, Wet Sponges.
-  * All Sculk family blocks (`SCULK`, `SCULK_CATALYST`, `SCULK_SHRIEKER`, `SCULK_SENSOR`, `SCULK_VEIN`).
-  * All tree leaves (`Tag.LEAVES`), Moss Blocks, and Moss Carpets.
-  * Nether Wart Blocks, Warped Wart Blocks, Melons, Pumpkins, and Froglights.
+**Target blocks for Shovels:** All shovel-mineable blocks — dirt, grass, sand, gravel, clay, mud, soul sand, soul soil, and snow.
 
 ---
 
-## ✂️ 4. AoE Shears (`SHEARS`)
+## 2. Tree Feller (`AXE`)
 
-* **Mass Sheep Shearing:** Right-clicking an adult sheep shears all adult sheep in a 5x5 radius simultaneously, dropping wool matching each sheep's natural color.
-* **Foliage Pruning:** Rapidly harvests leaves, cobwebs, vines, and tall grass in a 3x3 radius.
+Fells an entire connected tree in a single swing using BFS (breadth-first search). Starting from the clicked log, it expands to all adjacent logs of the same type. The search stops when it reaches `max-logs` (per-tool) or the global `max-tree-feller-blocks` setting (default: 500).
 
----
+Leaves adjacent to felled logs are collected into a separate set and removed after the logs, if `tree-feller-decay-leaves` is enabled in `config.yml`. Protection hooks are checked per-block before each break.
 
-## ♾️ 5. Infinite Utility Items
-
-* **Infinite Ender Pearl (`infinite_pearl`):**
-  * Launches ender pearls without consuming the item from the player's hand.
-  * Features a configurable cooldown with live countdown alerts on the Action Bar.
-* **Infinite Firework Rocket (`infinite_rocket`):**
-  * Provides Elytra flight boosts without depleting fireworks.
-* **Infinite Buckets (`infinite_water` & `infinite_lava`):**
-  * Places infinite water or lava sources.
-  * **Anti-Abuse Auto-Dissolve:** Placed liquids automatically evaporate after 10 seconds to prevent griefing, trolling, or world flooding.
-  * **Anti-Infinite Source:** Temporary water cannot form infinite water pools and cannot be collected back into regular vanilla buckets.
-* **Infinite Food (`infinite_golden_apple` & `infinite_steak`):**
-  * Food is never consumed from hand.
-  * Restores hunger, saturation, and applies potion buffs (Regeneration II & Absorption I for Golden Apples) with fair cooldown controls.
+Only works when the first block clicked is a log (`Tag.LOGS`). Does not break logs of different types in the same swing.
 
 ---
 
-## 🛡️ "Natural Blocks Only" Mode
+## 3. Hoes (`HOE`)
 
-Every player can open `/etools settings`:
-* When **Natural Blocks Only** is enabled:
-  * If a player strikes a block that was previously placed by a player, the tool is restricted to **1 single block** (1x1).
-  * When mining natural underground caves or operating a Cobblestone Generator, the tool continues to mine at full **3x3** or **5x5**.
-  * Prevents catastrophic accidents where players accidentally destroy their bases, walls, or chest rooms.
+Hoes have two distinct behaviors depending on what the player clicks:
 
-{% hint style="info" %}
-**Persistent Tracking:** Player-placed blocks are recorded in chunk persistent data containers (PDC) and synchronized with CoreProtect (if installed), making block data persistent across server restarts.
-{% endhint %}
+**Clicking a mature crop**
+Harvests all mature `Ageable` crops in the configured area and replants them at age 0. Area uses `width` and `height` relative to the player's horizontal facing direction (same as floor mode for drills). Also checks one block above and below the clicked block to handle elevated farmland. Supported crops include wheat, carrots, potatoes, beetroots, nether wart, cocoa, pitcher crops, and torchflowers.
+
+**Clicking a hoe-mineable block**
+Breaks blocks in a directional `WxHxD` area using the same orientation logic as drills. Hoe-mineable blocks include: all blocks in the `MINEABLE_HOE` tag, all leaves, hay bales, sculk family, moss, sponges, froglights, melons, pumpkins, and dried kelp blocks.
+
+---
+
+## 4. Shears (`SHEARS`)
+
+Breaks shearable blocks in a directional `WxHxD` area. Shearable blocks include: leaves, wool, cobweb, vine, glow lichen, hanging roots, short grass, tall grass, seagrass, ferns, and petal blocks.
+
+---
+
+## 5. Infinite Utility Items
+
+Items that do not consume the held item on use:
+
+| Item | Type | Behavior |
+|:---|:---|:---|
+| `infinite_pearl` | `INFINITE_PEARL` | Throws ender pearl without consuming it. Configurable cooldown. |
+| `infinite_rocket` | `INFINITE_ROCKET` | Fires elytra boost rocket without consuming it. Configurable cooldown. |
+| `infinite_water` | `INFINITE_BUCKET` | Places water; evaporates after `temporary-duration` seconds (default: 10s). Cooldown applies. |
+| `infinite_lava` | `INFINITE_BUCKET` | Places lava; evaporates after `temporary-duration` seconds (default: 10s). Cooldown applies. |
+| `infinite_golden_apple` | `INFINITE_GOLDEN_APPLE` | Eats a golden apple without consuming it. Configurable cooldown. |
+| `infinite_steak` | `INFINITE_STEAK` | Eats steak without consuming it. Configurable cooldown. |
+
+---
+
+## Natural Only Mode
+
+Players can toggle **Natural Only** mode from `/etools settings`. When enabled:
+
+- If the clicked block was placed by a player (detected via PDC metadata or CoreProtect), the tool breaks only that single block instead of the full area.
+- If the block is naturally generated terrain, the full area applies normally.
+
+This prevents players from accidentally destroying their own builds while using area tools in mines or cobblestone generators.
