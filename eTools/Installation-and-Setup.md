@@ -1,10 +1,10 @@
----
+﻿---
 description: Step-by-step instructions for installing and setting up eTools on Paper, Purpur, or Folia.
 ---
 
 # 📥 Installation & Setup
 
-## 📌 System Requirements
+## 🖥️ System Requirements
 
 * **Java Version:** Java 21 or higher.
 * **Server Software:**
@@ -19,29 +19,73 @@ description: Step-by-step instructions for installing and setting up eTools on P
 
 ---
 
-## 📥 Installation Steps
+## 🔑 License Activation
+
+eTools uses a **premium license system**. A valid license key is required to run the plugin.
+
+### Step 1: Obtain a License Key
+Purchase eTools via our **Discord community server** to receive your personal license key.
+
+### Step 2: Create `license.yml`
+Upon first launch (before any license is configured), the plugin will generate a `license.yml` file inside `/plugins/eTools/`:
+
+```yaml
+license:
+  # Enter the license key you received upon purchasing eTools from EproMC
+  key: "YOUR-LICENSE-KEY-HERE"
+```
+
+Replace `YOUR-LICENSE-KEY-HERE` with your actual key. Make sure to keep the **double quotes** — they are required.
+
+### Step 3: Restart or Reload
+Restart your server after placing the key. If the license is valid, the startup banner will confirm:
+
+```text
+[eTools] ========================================================
+[eTools]   eTools Premium License Verified!
+[eTools]   Licensed to: YourName
+[eTools] ========================================================
+```
+
+{% hint style="warning" %}
+**IP Binding:** Your license key is bound to your server's IP address. If you migrate servers, contact us via Discord to reset your IP binding.
+{% endhint %}
+
+{% hint style="danger" %}
+**License Security:** Do not share your license key. Each key is tied to a specific buyer and limited to a set number of server IPs. Unauthorized sharing will result in key revocation.
+{% endhint %}
+
+---
+
+## 📦 Installation Steps
 
 1. **Download the Plugin:**
-   Download `eTools-0.0.1-RELEASE.jar` from your official release source or Modrinth.
+   Download `eTools-0.0.1-RELEASE.jar` from the purchase channel in our Discord after completing your purchase.
 2. **Place in Server:**
    Copy the JAR file into your server's `/plugins/` directory.
-3. **Start the Server:**
-   Launch your server (`java -jar paper.jar`). The plugin will automatically:
-   * Download runtime dependencies (`HikariCP` and `sqlite-jdbc`) to your server's `libraries/` directory.
-   * Generate default configuration files in `/plugins/eTools/`:
+3. **Start the Server (First Launch):**
+   Launch your server. The plugin will:
+   * Generate `license.yml` in `/plugins/eTools/`.
+   * Display a license prompt in the console.
+4. **Configure License:**
+   Enter your license key into `license.yml` as described above.
+5. **Restart the Server:**
+   After placing your key, restart the server. On successful verification:
+   * Runtime dependencies (`HikariCP` and `sqlite-jdbc`) are downloaded automatically.
+   * Default configuration files are generated in `/plugins/eTools/`:
      * `config.yml`
      * `messages.yml`
      * `tools.yml`
      * `database.db` (when using SQLite mode)
-4. **Verification:**
-   Check your server console. You will be greeted by the eTools startup banner:
+6. **Verification:**
+   Check your server console for the eTools startup banner:
    ```text
     ______     ______   ______     ______     __         ______    
    /\  ___\   /\__  _\ /\  __ \   /\  __ \   /\ \       /\  ___\   
    \ \  __\   \/_/\ \/ \ \ \/\ \  \ \ \/\ \  \ \ \____  \ \___  \  
     \ \_____\    \ \_\  \ \_____\  \ \_____\  \ \_____\  \/\_____\ 
      \/_____/     \/_/   \/_____/   \/_____/   \/_____/   \/_____/ 
-      by epromite & epromc • v0.0.1-RELEASE
+      by epromite & epromc — v0.0.1-RELEASE
    ```
 
 ---
@@ -80,7 +124,7 @@ database:
 
 ---
 
-## 🔌 Optional Integrations (Hooks)
+## 🔗 Optional Integrations (Hooks)
 
 eTools automatically detects and hooks into the following plugins:
 

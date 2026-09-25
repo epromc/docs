@@ -28,3 +28,18 @@
 * [🛏️ Bed-Themed GUI & Customization](eHome/GUI-and-Customization.md)
 * [⚙️ Configuration Guide](eHome/Configuration-Guide.md)
 * [🗄️ Database & Storage Architecture](eHome/Database-and-Storage.md)
+
+## 💰 eEconomy
+* [⚡ Overview & Introduction](eEconomy/README.md)
+* [📥 Installation & Setup](eEconomy/Installation-and-Setup.md)
+* [⌨️ Commands & Permissions](eEconomy/Commands-and-Permissions.md)
+* [🪙 Currency Specification](eEconomy/Currency-Specification.md)
+* [🏆 GUI & Baltop System](eEconomy/GUI-and-Baltop.md)
+* [⚙️ Configuration Guide](eEconomy/Configuration-Guide.md)
+* [🗄️ Database & Storage Architecture](eEconomy/Database-and-Storage.md)
+
+## 👁️ eNightVision
+* [⚡ Overview & Introduction](eNightVision/README.md)
+* [📥 Installation & Setup](eNightVision/Installation-and-Setup.md)
+* [🏝️ Dynamic Island & Controls](eNightVision/Dynamic-Island-and-Controls.md)
+* [⚙️ Configuration Guide](eNightVision/Configuration-Guide.md)

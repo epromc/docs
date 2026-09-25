@@ -16,17 +16,17 @@ Welcome to the centralized documentation portal for **EproMC** Minecraft plugins
 
 ---
 
-## 📦 Select Plugin Documentation
+## 📦 Select Documentation
 
-| ⚡ eTools | ⚙️ eGens (v1.0.1) | 🛏️ eHome |
-| :---: | :---: | :---: |
-| [![eTools](https://img.shields.io/badge/Plugin-eTools-00F2FE?style=for-the-badge)](eTools/README.md) | [![eGens](https://img.shields.io/badge/Plugin-eGens%20v1.0.1-00D26A?style=for-the-badge)](eGens/README.md) | [![eHome](https://img.shields.io/badge/Plugin-eHome-FF5E5B?style=for-the-badge)](eHome/README.md) |
-| **Custom Tools Engine**<br><br>Harvester Hoes, Sell Wands, Trench Pickaxes, Lightning Wands, and lifespan tracking. | **Generator & Tycoon**<br><br>28 unified standalone generator files, anti-abuse drop lock, corruption & repair, and sellwands. | **Bed-Themed Home System**<br><br>16-color bed palette GUI, proactive safe teleportation, and social home sharing (`/home share`). |
-| 👉 [**Open eTools Docs →**](eTools/README.md) | 👉 [**Open eGens Docs →**](eGens/README.md) | 👉 [**Open eHome Docs →**](eHome/README.md) |
+| ⚡ eTools | ⚙️ eGens (v1.0.1) | 🛏️ eHome | 👁️ eNightVision |
+| :---: | :---: | :---: | :---: |
+| [![eTools](https://img.shields.io/badge/Plugin-eTools-00F2FE?style=for-the-badge)](eTools/README.md) | [![eGens](https://img.shields.io/badge/Plugin-eGens%20v1.0.1-00D26A?style=for-the-badge)](eGens/README.md) | [![eHome](https://img.shields.io/badge/Plugin-eHome-FF5E5B?style=for-the-badge)](eHome/README.md) | [![eNightVision](https://img.shields.io/badge/Mod-eNightVision-00D2FF?style=for-the-badge)](eNightVision/README.md) |
+| **Custom Tools Engine**<br><br>Harvester Hoes, Sell Wands, Trench Pickaxes, Lightning Wands, and lifespan tracking. | **Generator & Tycoon**<br><br>28 unified standalone generator files, anti-abuse drop lock, corruption & repair, and sellwands. | **Bed-Themed Home System**<br><br>16-color bed palette GUI, proactive safe teleportation, and social home sharing (`/home share`). | **Dynamic Island Night Vision**<br><br>Modern animated HUD, spring bounce physics, color morphing, and safe local-player mixins. |
+| 👉 [**Open eTools Docs →**](eTools/README.md) | 👉 [**Open eGens Docs →**](eGens/README.md) | 👉 [**Open eHome Docs →**](eHome/README.md) | 👉 [**Open eNightVision Docs →**](eNightVision/README.md) |
 
 ---
 
-## 🔍 All Plugins Overview
+## 🔍 All Plugins & Mods Overview
 
 ### ⚡ [eTools](eTools/README.md)
 **Modern Custom Tools & Utilities Engine**
@@ -51,15 +51,24 @@ Welcome to the centralized documentation portal for **EproMC** Minecraft plugins
 * Proactive safe teleportation algorithms preventing lava, fire, or mid-air accidents.
 * [Explore eHome Documentation →](eHome/README.md)
 
+### 👁️ [eNightVision](eNightVision/README.md)
+**Next-Gen Client-Side Night Vision Mod (`v1.0.0`)**
+* Revolutionary **Dynamic Island HUD** with nanosecond spring physics and shockwave halo ring.
+* Fluid **color morphing** between Electric Cyan Blue (`#00D2FF`) for ON and Soft Coral Red (`#FF5555`) for OFF.
+* Strict **Safe Local-Player Mixin** preventing entity or mob night vision bleeding.
+* Gentle modern toast chimes (`UI_TOAST_IN` / `UI_TOAST_OUT`) and persistent JSON configuration.
+* [Explore eNightVision Documentation →](eNightVision/README.md)
+
 ---
 
 ## 🖥️ Platform & Software Compatibility
 
 | Software / Dependency | Supported Version | Notes |
 | :--- | :--- | :--- |
-| **Java Runtime** | **Java 21+** | Modern virtual threads and pattern matching. |
+| **Java Runtime** | **Java 21+ / Java 25+** | Java 21+ for plugins, Java 25+ for MC 26.3 mods. |
 | **Paper / Purpur** | **1.20.4 – 1.21.x** | Full backward and forward compatibility. |
 | **Folia** | **Latest Builds** | Native region-scheduler thread isolation. |
+| **Fabric Loader** | **0.16.x+ (MC 26.3)** | Target loader for eNightVision client mod. |
 | **Vault** | 1.7+ | Seamless economy transactions. |
 | **PlaceholderAPI** | 2.11+ | Global placeholder hooks across all plugins. |
 
