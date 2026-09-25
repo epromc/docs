@@ -1,53 +1,54 @@
 ﻿---
-description: Comprehensive documentation for eTools - Modern Custom Tools & Utilities Engine for Paper & Folia.
+description: Documentation for eTools - custom tools and utilities plugin for Paper, Purpur, and Folia.
 ---
 
-# eTools — Overview
+# eTools
 
-**eTools** (`v0.0.1-RELEASE`) is a modern custom tools and utilities engine built for high-performance Minecraft servers on Paper, Purpur, and Folia.
+**eTools** (`v0.0.1-RELEASE`) is a custom tools plugin for Paper, Purpur, and Folia servers running Minecraft 1.21+. It lets you configure and distribute custom tools with area effects, tree felling, farming automation, and infinite utility items — all with an optional lifespan tied to player playtime or real-world time.
 
 [![bStats Servers](https://img.shields.io/bstats/servers/33947?style=for-the-badge&logo=minecraft&logoColor=white&label=bStats%20Servers&color=00D26A)](https://bstats.org/plugin/bukkit/eTools/33947)
 [![bStats Players](https://img.shields.io/bstats/players/33947?style=for-the-badge&logo=minecraft&logoColor=white&label=bStats%20Players&color=1085FF)](https://bstats.org/plugin/bukkit/eTools/33947)
 
-{% hint style="success" %}
-Built for Minecraft 1.21+ servers — providing directional 3x3/5x5 mining, tree felling, automated agricultural harvesting, infinite utilities, and online-time lifespan tracking with zero main-thread lag.
-{% endhint %}
+---
+
+## Features
+
+**Area Mining and Digging**
+Drills and shovels break blocks in a 3x3 or 5x5 area based on the direction the player is facing. Horizontal swings clear walls, downward swings clear floors. Target block lists and area sizes are configurable per tool.
+
+**Tree Felling**
+Axes fell entire trees in a single swing using BFS traversal, up to a configurable block limit (default: 500). Leaves decay naturally after the trunk is removed.
+
+**Farming Hoes**
+Right-clicking tills soil in a 3x3 or 5x5 area. Clicking on a mature crop harvests everything in radius and replants seeds automatically. Supports wheat, carrots, potatoes, beetroot, nether wart, cocoa, and more.
+
+**Infinite Utility Items**
+Ender pearls, firework rockets, water and lava buckets, golden apples, and steak can all be configured as infinite-use items with cooldowns. Placed water and lava evaporate after 10 seconds to prevent abuse.
+
+**Tool Lifespans**
+Each tool can be set to count down only while the player is online (`ONLINE_TIME`), count down in real-world time regardless of login status (`REAL_TIME`), or have no expiry at all (`UNLIMITED`). Remaining time is shown in the item lore and saved to the database.
+
+**Admin Commands**
+`/etools give`, `/etools duration`, and `/etools recall` let you distribute tools, adjust lifespans, and confiscate all active tools across the server — including items stored in containers and unloaded chunks.
+
+**License System**
+eTools requires a valid license key to run. Keys are sold through our Discord server and are bound to your server's IP address. The plugin validates the license on startup and runs a periodic heartbeat check.
 
 ---
 
-## Key Highlights
+## Pages
 
-* **Native Multi-Threading** — Built for Folia region schedulers and Paper async execution.
-* **Modern Aesthetic** — Small Caps typography, MiniMessage gradients, and clean visual design.
-* **Smart Agriculture** — 3x3 & 5x5 soil tilling with instant crop harvesting and auto-replanting.
-* **Lifespan Modes** — Active online playtime, real-world continuous countdown, or permanent tools.
-* **Anti-Abuse Safeguards** — Temporary auto-dissolving liquids, 2-stage emergency recall, and container expiration.
-* **Premium License System** — Server-bound license validation with IP-limit protection and heartbeat checks.
-
----
-
-## Quick Navigation
-
-* [Installation & Setup](Installation-and-Setup.md) — System requirements, license setup, database, and hooks.
-* [Commands & Permissions](Commands-and-Permissions.md) — Command syntax, duration formats, and permission nodes.
-* [Custom Tools Guide](Custom-Tools-Guide.md) — Deep dive into each tool archetype and mechanics.
-* [Configuration Guide](Configuration-Guide.md) — Customizing `config.yml`, `messages.yml`, and `tools.yml`.
-* [Database & Lifespans](Database-and-Lifespans.md) — SQLite/MySQL schema, container validation, and UUID tracking.
+- [Installation & Setup](Installation-and-Setup.md)
+- [Commands & Permissions](Commands-and-Permissions.md)
+- [Custom Tools Guide](Custom-Tools-Guide.md)
+- [Configuration Guide](Configuration-Guide.md)
+- [Database & Lifespans](Database-and-Lifespans.md)
 
 ---
 
-## How to Purchase
+## Purchasing
 
-**eTools** is sold exclusively through our **Discord community server**.
-
-1. Join the **EproMC Discord** server.
-2. Open a purchase ticket in the appropriate channel.
-3. Complete the transaction and receive your personal **license key**.
-4. Follow the [Installation & Setup](Installation-and-Setup.md) guide to activate your license.
-
-{% hint style="info" %}
-All purchases are handled directly via Discord. No third-party marketplace links are required.
-{% endhint %}
+eTools is sold exclusively through our Discord server. Open a ticket in the `#purchase` channel to get started. After completing the purchase, you will receive a license key to place in `plugins/eTools/license.yml`.
 
 ---
 
@@ -57,10 +58,8 @@ All purchases are handled directly via Discord. No third-party marketplace links
 
 ---
 
-## Support the Developer
+## Support
 
-[![Trakteer](https://img.shields.io/badge/Support-Trakteer-be1e2d.svg?style=for-the-badge)](https://trakteer.id/epromite/tip)
-[![Ko-fi](https://img.shields.io/badge/Support-Ko--fi-FF5E5B.svg?style=for-the-badge&logo=kofi&logoColor=white)](https://ko-fi.com/epromite/tip)
-
-* **Trakteer:** [trakteer.id/epromite/tip](https://trakteer.id/epromite/tip)
-* **Ko-fi:** [ko-fi.com/epromite/tip](https://ko-fi.com/epromite/tip)
+- Discord: [discord.gg/sVWuc49eYV](https://discord.gg/sVWuc49eYV)
+- Trakteer: [trakteer.id/epromite/tip](https://trakteer.id/epromite/tip)
+- Ko-fi: [ko-fi.com/epromite/tip](https://ko-fi.com/epromite/tip)
