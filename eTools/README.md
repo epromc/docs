@@ -81,14 +81,6 @@ eTools requires a license key to run. Keys are sold through the EproMC Discord s
 
 ---
 
-## Live Statistics
-
-[![bStats Statistics](https://bstats.org/signatures/bukkit/eTools.svg)](https://bstats.org/plugin/bukkit/eTools/33947)
-
----
-
 ## Support
 
 - Discord: [discord.gg/sVWuc49eYV](https://discord.gg/sVWuc49eYV)
-- Trakteer: [trakteer.id/epromite/tip](https://trakteer.id/epromite/tip)
-- Ko-fi: [ko-fi.com/epromite/tip](https://ko-fi.com/epromite/tip)
