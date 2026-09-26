@@ -14,7 +14,7 @@ eTools is sold exclusively through the EproMC Discord server. Join the server an
 **How many servers can I use one license on?**
 One license covers up to two server instances:
 - One **production server** (public-facing)
-- One **development or test server** (must be on a private/local IP — not publicly accessible)
+- One **development or test server** (must be on a private/local IP - not publicly accessible)
 
 If you need eTools on a second public server, you will need to purchase an additional license.
 
@@ -43,7 +43,7 @@ Save the file and restart your server.
 
 **The plugin says my license is invalid. What's wrong?**
 Common causes:
-- The key was copied incorrectly — check for extra spaces or missing characters.
+- The key was copied incorrectly - check for extra spaces or missing characters.
 - The license is bound to a different IP and needs a rebind.
 - The license was revoked due to a ToS violation.
 
@@ -74,9 +74,9 @@ By default, yes. Players can enable **Natural Only** mode via `/etools settings`
 
 **How does the lifespan system work?**
 Each tool has a configurable expiry mode:
-- `ONLINE_TIME` — counts down only while the player is connected.
-- `REAL_TIME` — counts down in real-world time regardless of login status.
-- `UNLIMITED` — the tool never expires.
+- `ONLINE_TIME` - counts down only while the player is connected.
+- `REAL_TIME` - counts down in real-world time regardless of login status.
+- `UNLIMITED` - the tool never expires.
 
 Remaining time is stored per-item in the database and displayed in the item lore.
 

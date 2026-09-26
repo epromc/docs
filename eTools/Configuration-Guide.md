@@ -1,8 +1,8 @@
----
+﻿---
 description: Complete reference for configuring eTools settings, messages, and custom tool archetypes.
 ---
 
-# ⚙️ Configuration Guide
+# Configuration Guide
 
 All aspects of **eTools** can be easily customized across three primary configuration files located in `/plugins/eTools/`:
 
@@ -70,13 +70,13 @@ Every message, prefix, alert, and notification can be tailored to match your ser
 {% endhint %}
 
 ```yaml
-prefix: "<gradient:#B983FF:#7F00FF><b>ᴇᴛᴏᴏʟs</b></gradient> <dark_gray>»</dark_gray> "
+prefix: "<gradient:#B983FF:#7F00FF><b>eTools</b></gradient> <dark_gray>»</dark_gray> "
 
 messages:
-  no-permission: "<red>ʏᴏᴜ ᴅᴏ ɴᴏᴛ ʜᴀᴠᴇ ᴘᴇʀᴍɪssɪᴏɴ ᴛᴏ ᴇxᴇᴄᴜᴛᴇ ᴛʜɪs ᴄᴏᴍᴍᴀɴᴅ.</red>"
-  player-not-found: "<red>ᴘʟᴀʏᴇʀ <gold>{player}</gold> ᴡᴀs ɴᴏᴛ ꜰᴏᴜɴᴅ ᴏɴʟɪɴᴇ.</red>"
-  tool-given: "<gray>ɢᴀᴠᴇ <yellow>{amount}x</yellow> {tool} <gray>ᴛᴏ</gray> <gold>{player}</gold> <gray>(ʟɪꜰᴇsᴘᴀɴ: <#B983FF>{duration}</#B983FF>).</gray>"
-  tool-received: "<gray>ʏᴏᴜ ʀᴇᴄᴇɪᴠᴇᴅ {tool} <gray>(ʟɪꜰᴇsᴘᴀɴ: <#B983FF>{duration}</#B983FF>).</gray>"
+  no-permission: "<red>You do not have permission to execute this command.</red>"
+  player-not-found: "<red>Player <gold>{player}</gold> was not found online.</red>"
+  tool-given-sender: "<gray>You gave <gold>{amount}x</gold> <yellow>{tool}</yellow> to <aqua>{player}</aqua> <dark_gray>(</dark_gray><gray>Lifespan: <light_purple>{duration}</light_purple></gray><dark_gray>)</dark_gray></gray>"
+  tool-given-receiver: "<gray>You received <gold>{amount}x</gold> <yellow>{tool}</yellow>! <dark_gray>(</dark_gray><gray>Lifespan: <light_purple>{duration}</light_purple></gray><dark_gray>)</dark_gray></gray>"
   # ... (all in-game messages are fully customizable)
 ```
 
@@ -84,15 +84,22 @@ messages:
 
 ## 3. `tools.yml` (Custom Tool Creation)
 
-You have total freedom over custom tools. You are never limited to default templates—create any custom tool archetype with unique models, sounds, particles, and enchantments.
+You have total freedom over custom tools. You are never limited to default templates - create any custom tool archetype with unique models, sounds, particles, and enchantments.
+
+### Dimension Flexibility:
+Area tools (drills, shovels, hoes, shears) support flexible dimension configurations:
+- `radius: 3` - Standard 3x3 square area (depth 1)
+- `radius: "3x3x3"` - Full 3D cube (3 wide, 3 high, 3 blocks deep into wall/floor)
+- `radius: "3, 3, 1"` - Comma-separated (width, height, depth)
+- `radius: "3x2"` - Custom dimensions (3 wide, 2 high)
 
 ### Configuration Specification:
 
 ```yaml
 tools:
-  your_tool_id:
+  amethyst_drill:
     # Tool archetype: DRILL, SHOVEL, AXE, HOE, SHEARS, INFINITE_PEARL, INFINITE_ROCKET,
-    # INFINITE_WATER, INFINITE_LAVA, INFINITE_GOLDEN_APPLE, INFINITE_STEAK
+    # INFINITE_BUCKET, INFINITE_GOLDEN_APPLE, INFINITE_STEAK
     type: DRILL
 
     # Base Minecraft item material
@@ -102,21 +109,21 @@ tools:
     custom-model-data: 10001
 
     # Display name with MiniMessage gradient support
-    display-name: "<gradient:#B983FF:#7F00FF><b>ᴀᴍᴇᴛʜʏsᴛ ᴅʀɪʟʟ</b></gradient>"
+    display-name: "<gradient:#B983FF:#7F00FF><b>Amethyst Drill</b></gradient>"
 
     # Custom lore lines (<time_remaining> placeholder automatically updates)
     lore:
-      - "<dark_gray>─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─</dark_gray>"
-      - "<gray>ᴍɪɴᴇs ᴀ <#B983FF>3x3</#B983FF> ᴀʀᴇᴀ ɪɴsᴛᴀɴᴛʟʏ ɪɴ ᴛʜᴇ"
-      - "<gray>ᴅɪʀᴇᴄᴛɪᴏɴ ʏᴏᴜ ᴀʀᴇ ʟᴏᴏᴋɪɴɢ."
+      - "<dark_gray>----------------</dark_gray>"
+      - "<gray>Mines a <#B983FF>3x3</#B983FF> area instantly in the"
+      - "<gray>direction you are looking."
       - ""
-      - "<dark_gray>▸</dark_gray> <gray>ᴛʏᴘᴇ:</gray> <#B983FF>ᴅɪʀᴇᴄᴛɪᴏɴᴀʟ ᴅʀɪʟʟ</#B983FF>"
-      - "<dark_gray>▸</dark_gray> <gray>ʀᴀᴅɪᴜs:</gray> <#B983FF>3x3 ʙʟᴏᴄᴋs</#B983FF>"
-      - "<dark_gray>▸</dark_gray> <gray>ʟɪꜰᴇsᴘᴀɴ:</gray> <#B983FF><time_remaining></#B983FF>"
-      - "<dark_gray>─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─</dark_gray>"
+      - "<dark_gray>»</dark_gray> <gray>Type:</gray> <#B983FF>Directional Drill</#B983FF>"
+      - "<dark_gray>»</dark_gray> <gray>Radius:</gray> <#B983FF>3x3 blocks</#B983FF>"
+      - "<dark_gray>»</dark_gray> <gray>Lifespan:</gray> <#B983FF><time_remaining></#B983FF>"
+      - "<dark_gray>----------------</dark_gray>"
 
-    # Mining / tilling radius (3 = 3x3, 5 = 5x5)
-    radius: 3
+    # Mining / digging dimensions (supports 3, "3x3", "3x3x3", "3x2", etc.)
+    radius: "3x3x3"
 
     # Lifespan rules
     lifespan:

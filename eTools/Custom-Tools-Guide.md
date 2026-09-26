@@ -19,16 +19,16 @@ Area-breaking tools that mine or dig in a configurable 3D volume. The shape is d
 The three fields combine into a `WxH` or `WxHxD` shape that automatically adapts to the face the player is mining:
 
 **Mining a wall** (facing North, South, East, or West)
-The area opens as a vertical plane in front of the player. Width expands horizontally, height expands vertically. If `depth > 1`, the area extends further into the wall — for example, `3x3x3` cuts a cube-shaped tunnel three blocks deep.
+The area opens as a vertical plane in front of the player. Width expands horizontally, height expands vertically. If `depth > 1`, the area extends further into the wall - for example, `3x3x3` cuts a cube-shaped tunnel three blocks deep.
 
 **Mining a floor or ceiling** (looking up or down)
 The area opens as a flat horizontal plane. Width and height both span the X/Z axes aligned with the player's facing direction. Depth extends further up or down.
 
 You can configure non-square shapes too. A `3x1x1` drill clears a horizontal strip; a `1x3x1` drill clears a vertical strip; a `3x3x3` drill cuts a full cube on each swing.
 
-**Target blocks for Drills:** All pickaxe-mineable blocks — stone, ores, deepslate, netherrack, end stone, sandstone, basalt, blackstone, tuff, granite, diorite, andesite, and similar.
+**Target blocks for Drills:** All pickaxe-mineable blocks - stone, ores, deepslate, netherrack, end stone, sandstone, basalt, blackstone, tuff, granite, diorite, andesite, and similar.
 
-**Target blocks for Shovels:** All shovel-mineable blocks — dirt, grass, sand, gravel, clay, mud, soul sand, soul soil, and snow.
+**Target blocks for Shovels:** All shovel-mineable blocks - dirt, grass, sand, gravel, clay, mud, soul sand, soul soil, and snow.
 
 ---
 

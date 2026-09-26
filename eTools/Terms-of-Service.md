@@ -131,7 +131,7 @@ Due to the digital, non-returnable nature of the Software and the immediate deli
 ### 7.2 Pre-Purchase Due Diligence
 Before purchasing eTools, you are solely responsible for:
 - Reviewing the official documentation, system requirements, and feature guides to ensure the Software meets your specific server requirements.
-- Verifying server engine and Java compatibility (Paper, Purpur, or Folia on Java 21+).
+- Verifying server engine and Java compatibility (Paper, Purpur, or Folia on Minecraft 1.21.x / 26.1.2 - 26.2 with Java 21+ or Java 25).
 - Asking any technical or compatibility questions in the official EproMC Discord pre-purchase channels.
 
 By completing your purchase, you explicitly acknowledge and agree that you waive any statutory or general right of withdrawal or refund once the digital License Key has been issued.

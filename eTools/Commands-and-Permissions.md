@@ -1,17 +1,17 @@
----
+﻿---
 description: Complete reference for all eTools player and administrative commands and permissions.
 ---
 
-# ⌨️ Commands & Permissions
+# Commands & Permissions
 
-## 📌 Commands Reference
+## Commands Reference
 
 ### 1. `/etools settings`
 * **Permission:** `etools.settings` (Default: All players)
 * **Description:** Opens the personal player settings GUI to configure individual gameplay preferences:
   * Visual particle effects (Enabled / Disabled).
   * Audio sound effects (Enabled / Disabled).
-  * **Natural Blocks Only** mode (Restricts custom tools to 1x1 on player-placed blocks to protect houses and buildings).
+  * **Natural Blocks Only** mode (Restricts custom tools to 1x1 on player-placed blocks to protect player structures).
 
 ---
 
@@ -43,7 +43,7 @@ description: Complete reference for all eTools player and administrative command
 
 ### 4. `/etools recall [player|all]` & `/etools recall confirm`
 * **Permission:** `etools.admin` (Default: OP)
-* **Description:** Emergency confiscation system that permanently purges all eTools items across the server (Two-Stage Confirmation).
+* **Description:** Emergency confiscation system that permanently purges eTools items across the server (Two-Stage Confirmation).
 
 {% hint style="danger" %}
 **Caution:** `/etools recall confirm` is an irreversible action. It sweeps inventories, open chests, ground items, containers across loaded chunks, and marks unloaded chunk items for deletion.
@@ -51,8 +51,8 @@ description: Complete reference for all eTools player and administrative command
 
 * **Usage Flow:**
   1. Execute `/etools recall all` (or `/etools recall Steve`).
-  2. The plugin will prompt an alert in chat:
-     `» ᴡᴀʀɴɪɴɢ: ᴛʜɪs ᴡɪʟʟ ʀᴇᴄᴀʟʟ ᴀʟʟ ᴇᴛᴏᴏʟs ɪᴛᴇᴍs ꜰʀᴏᴍ ALL ONLINE PLAYERS! ᴛʏᴘᴇ /etools recall confirm ᴡɪᴛʜɪɴ 15s ᴛᴏ ᴘʀᴏᴄᴇᴇᴅ.`
+  2. The plugin will display an alert in chat:
+     `» WARNING: This will recall all etools items from ALL ONLINE PLAYERS! Type /etools recall confirm within 15s to proceed..`
   3. Type `/etools recall confirm` within 15 seconds.
   4. All player inventories, armor, open containers, world blocks (Chests, Hoppers, Barrels, Shulkers), entities (Minecarts, Donkeys), and ground drop items are cleaned instantly.
 
@@ -60,7 +60,7 @@ description: Complete reference for all eTools player and administrative command
 
 ### 5. `/etools list`
 * **Permission:** `etools.admin` (Default: OP)
-* **Description:** Displays an aesthetic list of all registered custom tools, their category, and their default expiry mode in chat.
+* **Description:** Displays a formatted list of all registered custom tools, their category, and their default expiry mode in chat.
 
 ---
 
@@ -76,7 +76,7 @@ description: Complete reference for all eTools player and administrative command
 
 ---
 
-## 🔑 Permissions Reference
+## Permissions Reference
 
 | Permission Node | Default | Description |
 | :--- | :---: | :--- |
