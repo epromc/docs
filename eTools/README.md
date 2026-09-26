@@ -72,12 +72,16 @@ Players can toggle **Natural Only** mode via `/etools settings`. When enabled, a
 - [Custom Tools Guide](Custom-Tools-Guide.md)
 - [Configuration Guide](Configuration-Guide.md)
 - [Database & Lifespans](Database-and-Lifespans.md)
+- [Terms of Service](Terms-of-Service.md)
+- [FAQ](FAQ.md)
 
 ---
 
-## Purchasing
+## Purchasing & License Terms
 
-eTools requires a license key to run. Keys are sold through the EproMC Discord server and are bound to your server's IP address. Open a ticket in the `#purchase` channel. After purchasing, place the key in `plugins/eTools/license.yml`.
+eTools requires a commercial license key to operate. Keys are sold exclusively through the EproMC Discord server and are bound to your server IP address (covering 1 production server and 1 private test server). Open a ticket in the `#purchase` channel. After purchasing, place your key in `plugins/eTools/license.yml`.
+
+Before purchasing or using eTools, please review and agree to our [Terms of Service](Terms-of-Service.md). All digital sales are strictly final and non-refundable once the license key has been issued. For common questions regarding instance limits, IP rebinding, and activation, check the [FAQ](FAQ.md).
 
 ---
 
