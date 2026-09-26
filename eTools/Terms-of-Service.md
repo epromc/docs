@@ -123,30 +123,27 @@ Major architectural overhauls, complete rewrites, or significant multi-version e
 
 ---
 
-## 7. Refund and Cancellation Policy
+## 7. No Refund Policy (All Sales Final)
 
-### 7.1 24-Hour Refund Window
-Because eTools is a digital product delivered immediately upon payment, all refund requests are strictly governed by our **24-hour evaluation window**. You must submit your refund request within exactly twenty-four (24) hours of the original purchase timestamp.
+### 7.1 Strict No-Refund Policy
+Due to the digital, non-returnable nature of the Software and the immediate delivery of digital License Keys and software binaries upon purchase, **all sales are strictly final**. EproMC does not offer, issue, or permit refunds, returns, or exchanges for any purchases under any circumstances.
 
-### 7.2 Refund Eligibility Criteria
-To qualify for a refund within the 24-hour window, all of the following conditions must be met:
-1. The License Key has not been validated on a live production server more than once.
-2. You provide official proof of purchase (transaction ID, payment receipt, and associated Discord user ID).
-3. You demonstrate a verifiable, reproducible technical defect that our support team is unable to resolve within a reasonable timeframe.
+### 7.2 Pre-Purchase Due Diligence
+Before purchasing eTools, you are solely responsible for:
+- Reviewing the official documentation, system requirements, and feature guides to ensure the Software meets your specific server requirements.
+- Verifying server engine and Java compatibility (Paper, Purpur, or Folia on Java 21+).
+- Asking any technical or compatibility questions in the official EproMC Discord pre-purchase channels.
 
-### 7.3 Non-Refundable Scenarios
-Refunds will not be granted under the following circumstances:
-- Requests submitted after the 24-hour window has elapsed.
-- General change of mind, server project cancellation, or budgetary disputes.
-- Failure to verify server compatibility before purchasing (e.g., running outdated or unsupported server engines).
-- License revocation resulting from violations of this Agreement.
-- Unilateral payment chargebacks or PayPal disputes initiated without prior ticket communication.
+By completing your purchase, you explicitly acknowledge and agree that you waive any statutory or general right of withdrawal or refund once the digital License Key has been issued.
+
+### 7.3 Technical Assistance
+Inability to configure, set up, or operate the Software does not qualify for a refund. If you encounter technical issues, unexpected errors, or configuration difficulties, our support team will provide technical assistance through the official Discord support ticket system to assist you in resolving the problem.
 
 ### 7.4 Chargebacks and Disputes
-Initiating an unauthorized payment dispute, claim, or chargeback through your payment provider without contacting EproMC support constitutes a material breach of this Agreement. In the event of a chargeback:
-- Your License Key and registered server IPs will be immediately and permanently blacklisted.
-- Your access to the EproMC Discord server and future software updates will be terminated.
-- Your account information may be shared with anti-fraud networks to prevent further fraudulent transactions.
+Initiating an unauthorized payment dispute, claim, or chargeback through your bank, credit card issuer, or payment processor without prior authorization constitutes fraudulent activity and a material breach of this Agreement. In the event of an unauthorized chargeback or payment reversal:
+- Your License Key and all registered server IP addresses will be immediately and permanently blacklisted across the EproMC verification network.
+- Your access to the EproMC Discord server, future product updates, and customer support will be terminated immediately.
+- EproMC reserves the right to report disputed accounts and associated identifiers to anti-fraud networks and digital blacklist registries.
 
 ---
 
@@ -216,3 +213,4 @@ For questions regarding these Terms of Service, license purchases, rebind reques
 
 - **Discord**: [discord.gg/sVWuc49eYV](https://discord.gg/sVWuc49eYV)
 - **Support Channel**: Open a ticket in the designated support category.
+

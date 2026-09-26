@@ -91,7 +91,8 @@ Yes. All tools are defined in `plugins/eTools/tools.yml`. You can configure area
 ## Refunds & Support
 
 **Can I get a refund?**
-Refunds are available within **24 hours** of purchase, as long as the license has not been actively used on a live server more than once. Contact support in Discord with your proof of purchase. See the [Terms of Service](Terms-of-Service.md) for the full policy.
+No. Because eTools is an intangible digital software product delivered immediately upon payment with a unique license key, all sales are strictly final and non-refundable. Please review our documentation and feel free to ask questions in our Discord server before purchasing. See the [Terms of Service](Terms-of-Service.md) for full details.
 
 **Where do I get support?**
 All support is handled through the EproMC Discord server. Open a ticket and include your license information and any relevant error logs from your server console.
+
