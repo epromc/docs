@@ -1,12 +1,19 @@
 ﻿# Table of contents
 
-* [🛠️ Overview & Introduction](README.md)
+* [Overview](README.md)
 
-## ⚡ Getting Started
-* [📥 Installation & Setup](Installation-and-Setup.md)
-* [🔧 Commands & Permissions](Commands-and-Permissions.md)
+## Getting Started
 
-## 🔩 Core Features & Mechanics
-* [🔨 Custom Tools & Utilities](Custom-Tools-Guide.md)
-* [⚙️ Configuration Guide](Configuration-Guide.md)
-* [🗄️ Database & Lifespans](Database-and-Lifespans.md)
+* [Installation & Setup](Installation-and-Setup.md)
+* [Commands & Permissions](Commands-and-Permissions.md)
+
+## Core Features & Mechanics
+
+* [Custom Tools & Utilities](Custom-Tools-Guide.md)
+* [Configuration Guide](Configuration-Guide.md)
+* [Database & Lifespans](Database-and-Lifespans.md)
+
+## Legal
+
+* [Terms of Service](Terms-of-Service.md)
+* [FAQ](FAQ.md)
